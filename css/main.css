@@ -1,0 +1,245 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+
+li {
+    text-decoration: none;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+nav {
+    opacity: 0;
+    height: 0%;
+    position: relative;
+    left: 4rem;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position:fixed;
+    top: 0.5rem;
+    left: -3rem;
+}
+
+.nav-button-label {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    color: rgb(97, 122, 114);
+    background-color: rgb(165, 212, 198);
+    font-size: xx-large;
+    border: 0.2rem solid rgb(97, 122, 114);
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.nav-logo {
+    display: none;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+#nav-toggle:checked + nav {
+    opacity: 1;
+    line-height: 2rem;
+    background-color: #B6CEC1;
+    border-radius: 10px;
+    margin-top: 2rem;
+    padding: 0.5rem 0.5rem 0.5rem 0rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    
+}
+
+.main-explore {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left {
+    display: block;
+    width: 100%;
+    height: 10rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home {
+    background-image: url(/img/scott-webb-102825.jpg);
+}
+
+.special {
+    background-image: url(/img/billetto-editorial-334686.jpg);
+}
+
+.visit {
+    background-image: url(/img/exhibition-1863344_1920.jpg);
+}
+
+.involve {
+    background-image: url(/img/people-219985_1280.jpg);
+}
+
+.exhibition {
+    background-image: url(/img/mammoth-1257288_1920.jpg);
+}
+
+.explore {
+    background-image: url(/img/scientific-2040795_1280.jpg);
+}
+
+.right {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.right h1 {
+    background-color: #B6CEC1;
+    padding: 1rem 0rem;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+
+.right h1, h2 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+
+.right p {
+    max-width: 35rem;
+    align-self: center;
+    margin: 0 2rem 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+
+footer {
+    display: flex;
+    height: 7%;
+    width: 100%;
+    justify-content: center;
+    gap: 4rem;
+    align-items: center;
+    background-color: #B6CEC1;
+    color: rgba(0, 0, 0, 0.7);
+    padding-left: 5rem;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+
+footer p {
+    display: none;
+}
+
+
+/* Media query larger screen */
+
+@media screen and (min-width: 768px) {
+
+    footer p {
+        display: block;
+    }
+
+    .right h1 {
+        background: none;
+        padding: 2rem 0rem;
+        margin: 0;
+    }
+    
+    .nav-button-label {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 10%;
+        background-color: #B6CEC1;
+    }
+
+    .nav-container {
+        position: relative;
+        top: auto;        
+        left: auto;
+    }
+
+    nav {
+        opacity: 1;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        max-width: 100%;
+    }
+
+    .nav-logo {
+        display: block;
+        width: 9rem;
+        cursor: pointer;
+
+    }
+    nav ul {
+        display: flex;
+        height: max-content;
+        width: 80%;
+        gap: 2rem;
+    }
+    
+    nav ul li a:hover{
+        color: rgb(97, 122, 114);
+        
+    }
+
+    .main-explore {
+        height: 90%;
+    }
+
+    .left {
+        width: 60%;
+        height: auto;
+    }
+
+    .right {
+        height: 93%;
+        width: 40%;
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+
+}
